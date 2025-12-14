@@ -65,3 +65,18 @@ body {
     /* white on hover */
     text-decoration: underline;
 }
+
+.main-nav a:active {
+    color: blue;
+}
+
+/*footer*/
+
+
+footer {
+    background: #1F1F1F;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
