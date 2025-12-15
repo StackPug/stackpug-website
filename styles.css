@@ -63,11 +63,11 @@ body {
 .main-nav a:hover {
     color: #ffffff;
     /* white on hover */
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .main-nav a:active {
-    color: blue;
+    color: pink;
 }
 
 /*footer*/
