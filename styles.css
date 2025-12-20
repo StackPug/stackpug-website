@@ -72,13 +72,36 @@ body {
     color: pink;
 }
 
-/*footer*/
-
-
-footer {
-    background: var(--charcoal);
-    color: #ffffff;
-    text-align: center;
+.callout {
+    background-color: #e0f7fa;
+    border-left: 5px solid #00acc1;
     padding: 20px;
-    font-size: 0.9rem;
+    margin-top: 20px;
+    text-align: center;
 }
+
+.cta-button {
+    display: inline-block;
+    background-color: #00acc1;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background-color: #008b9a;
+
+
+    /*footer*/
+
+
+    footer {
+        background: var(--charcoal);
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+    }
