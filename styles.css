@@ -47,7 +47,7 @@ body {
 .main-nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 30px;
     margin: 0;
     padding: 0;
@@ -93,10 +93,6 @@ body {
 
 .cta-button:hover {
     background-color: #008b9a;
-
-
-    /*footer*/
-
 }
 
 footer {
