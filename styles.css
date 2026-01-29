@@ -33,11 +33,7 @@ body {
 
 .main-nav {
     background: #9362a4;
-    padding: 12px 20px;
-}
-
-.main-nav {
-    padding: 14px 0;
+    padding: 14px 20px;
 }
 
 .main-nav a {
@@ -101,4 +97,21 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
 }
