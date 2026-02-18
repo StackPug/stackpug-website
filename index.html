@@ -3,15 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>StackPug</title>
-    <link
-        rel="stylesheet"
-        href="styles.css"
-    >
+    <title>StackPug website</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
         rel="stylesheet"
     >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
 </head>
 
 <body>
@@ -19,63 +24,70 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="learning.html">Learning</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="learning.html">Learning</a></li>
         </ul>
     </nav>
     <section class="hero">
-        <h1>StackPug</h1>
-        <p>Clean, responsive websites built while learning modern web development.</p>
-        <a
-            href="#services"
-            class="cta-button"
-        >See What I’m Building</a>
-    </section>
+        <h1 class="visually-hidden">StackPug</h1>
+        <header class="site-header">
+            <img
+                src="images/stackpug-s.png"
+                alt="StackPug logo"
+                class="logo"
+            >
+        </header>
 
-    <header class="site-header">
-        <img
-            src="images/stackpug-x.png"
-            alt="StackPug logo"
-            class="logo"
-        >
-    </header>
+    </section>
+    <section class="callout">
+        <div class="callout-1">
+            <p>Simple, clean, responsive websites built for local businesses</p>
+        </div>
+        <a
+            href="#services-1"
+            class="cta-button-1"
+        >Click here to view our portfolio</a>
+    </section>
 
     <section
         id="services"
         class="services"
     >
-        <h2>What I’m Working On</h2>
+        <h2>What we offer</h2>
 
-        <div class="service-list">
-            <div class="service">
+        <div class="services-grid">
+            <div class="service-box">
                 <h3>Front-End Websites</h3>
                 <p>Simple, responsive websites built with HTML and CSS.</p>
             </div>
 
-            <div class="service">
+            <div class="service-box">
                 <h3>Styling & Layout</h3>
                 <p>Improving design, spacing, and usability of existing pages.</p>
             </div>
 
-            <div class="service">
+            <div class="service-box">
                 <h3>Accessibility</h3>
                 <p>Building sites that are readable, usable, and inclusive.</p>
             </div>
 
-            <div class="service">
-                <h3>Learning Projects</h3>
-                <p>Showcasing my progress through real coding challenges.</p>
+            <div class="service-box">
+                <h3>Continued Learning</h3>
+                <p>Dedicated to continued learning and staying up-to-date with best practices.</p>
             </div>
         </div>
     </section>
-    <div class="callout">
-        <strong>Don’t wait!</strong> Offerering quality services at unbeatable prices.
+    <div
+        class="callout-2"
+        id="contact"
+    >
+        <strong>Don’t wait!</strong><br> Offering quality services at unbeatable prices.
         <br>
         <a
-            href="#"
-            class="cta-button"
-        >Click here</a>
+            href="#contact"
+            class="cta-button-2"
+        >Contact Us</a>
     </div>
     <footer>
         <p>© 2026 StackPug™. All rights reserved.</p>

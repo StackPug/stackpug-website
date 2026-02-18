@@ -6,14 +6,27 @@
     box-sizing: border-box;
 }
 
+/* Visually hidden class for accessibility h1 */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 html,
 body {
     margin: 0;
-    padding: 0;
+    padding-top: 40px;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: var(--charcoal);
-    background-color: #9362a4;
+    background-color: #FFEFCB
 }
 
 .site-header {
@@ -26,14 +39,22 @@ body {
 }
 
 .logo {
-    width: 1500px;
-    max-width: 100%;
-    margin-bottom: 20px;
+    width: 400px;
+    max-width: 80%;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 
 .main-nav {
-    background: #9362a4;
+    /*
+    background: #b058c2; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--charcoal);
     padding: 14px 20px;
+    z-index: 1000;
 }
 
 .main-nav a {
@@ -50,18 +71,16 @@ body {
 }
 
 .main-nav a {
-    color: var(--charcoal);
-    /* black text */
+    display: inline-block;
     text-decoration: none;
-    /* remove default underline */
     font-weight: 500;
-    transition: color 0.2s ease;
+    color: white;
+    transition: color 0.3s ease transform 0.2s ease;
 }
 
 .main-nav a:hover {
-    color: #ffffff;
-    /* white on hover */
     text-decoration: none;
+    transform: translateY(-4px);
 }
 
 .main-nav a:active {
@@ -69,25 +88,56 @@ body {
 }
 
 .callout {
-    background-color: #e0f7fa;
-    border-left: 5px solid #00acc1;
-    padding: 20px;
-    margin-top: 20px;
     text-align: center;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* ← THIS makes spacing perfectly even */
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: #00acc1;
+.callout-2 {
+    background-color: #b058c2;
     color: white;
     padding: 12px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
 }
 
-.cta-button:hover {
+.callout-1 {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--charcoal);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    padding: 20px 12px 20px;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: 0.8px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cta-button-1 {
+    display: inline-block;
+    /* ← key change */
+    background-color: #b058c2;
+    color: var(--charcoal);
+    padding: 12px 20px;
+    font-size: 1.25rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.cta-button-1:hover {
+    background-color: #008b9a;
+}
+
+.cta-button-2:hover {
     background-color: #008b9a;
 }
 
@@ -101,9 +151,15 @@ footer {
 
 .hero {
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 1rem;
     max-width: 900px;
     margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    /* ← magic spacing control */
 }
 
 .hero h1 {
@@ -111,7 +167,78 @@ footer {
     margin-bottom: 1rem;
 }
 
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+.hero {
+    padding-bottom: 20px;
+}
+
+.hero-p {
+    padding: 0;
+}
+
+.services {
+    text-align: center;
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.services h2 {
+    margin: 0px;
+    font-size: 2.5rem;
+}
+
+.cta-button-2 {
+    display: inline-block;
+    background-color: var(--charcoal);
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.callout-1 p {
+    margin: 0;
+    /* remove default paragraph margin */
+}
+
+.service-box,
+.callout-1,
+.callout-2 {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-box:hover,
+.cta-button-1:hover,
+.cta-button-2:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }
