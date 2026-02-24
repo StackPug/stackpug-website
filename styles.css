@@ -368,7 +368,8 @@ footer {
     box-shadow: 0 10px 22px rgba(0, 0, 0, .18);
 }
 
-.learning {
+.learning,
+.hosting {
     grid-column: 1 / -1;
     max-width: 420px;
     justify-self: center;
@@ -416,6 +417,10 @@ footer {
     max-width: 700px;
     margin: 60px auto;
     padding: 20px;
+}
+
+.contact-section h1 {
+    text-align: center;
 }
 
 .contact-section p {
