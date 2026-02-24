@@ -45,6 +45,32 @@ h3 {
     font-size: 1.75rem;
 }
 
+h2 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--purple);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+h2 {
+    scroll-margin-top: 90px;
+    /* prevents fixed nav covering headings when linked */
+}
+
 /* ======================================================
    3. REUSABLE COMPONENTS (ALL PAGES)
 ====================================================== */
@@ -359,18 +385,20 @@ footer {
 
 .services {
     text-align: center;
-    padding: 1rem;
+    padding: 60px 20px;
+    /* section spacing */
     max-width: 900px;
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
 }
 
 .services h2 {
-    font-size: 2.5rem;
-    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+    /* space under heading */
 }
 
 .services-grid {
@@ -404,20 +432,22 @@ footer {
 
 .why-website {
     text-align: center;
-    padding: 1rem 1rem 2rem;
+    padding: 60px 20px;
+    /* section spacing */
     max-width: 900px;
     margin: 0 auto;
 }
 
 .why-website h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+    /* space under heading */
 }
 
 .why-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-top: 20px;
 }
 
 .why-box {
@@ -438,20 +468,26 @@ footer {
 Choose StackPug section */
 .why-choose {
     text-align: center;
-    padding: 1rem;
+    padding: 60px 20px;
+    /* section spacing */
     max-width: 900px;
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+}
+
+.why-choose h2 {
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+    /* space under heading */
 }
 
 .choose-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-top: 20px;
 }
 
 .choose-box {
@@ -559,6 +595,10 @@ Choose StackPug section */
     .contact-section {
         margin: 30px 15px;
         padding: 10px;
+    }
+
+    .choose-grid {
+        grid-template-columns: 1fr;
     }
 }
 
