@@ -25,16 +25,33 @@
 
     <header class="site-header">
         <nav class="main-nav">
+            <input
+                type="checkbox"
+                id="menu-toggle"
+            >
+            <label
+                for="menu-toggle"
+                class="hamburger"
+            >☰</label>
+
             <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a
+                        href="contact.html"
+                        class="active"
+                    >Contact</a></li>
                 <li><a href="learning.html">Learning</a></li>
             </ul>
         </nav>
-        <a href="index.html">
+        <a
+            href="index.html"
+            title="Home"
+            aria-label="Go to homepage"
+        >
             <img
                 src="./images/stackpug-s.png"
                 alt="StackPug Home logo"
@@ -46,12 +63,78 @@
 
     <main class="page-content">
 
-        <section class="content-box">
-            <h2>Get In Touch</h2>
-            <p>
-                Replace this with your page content.
-                This box style works for About, Services info, Reviews text, etc.
-            </p>
+        <section class="contact-section">
+
+            <h1>Contact StackPug</h1>
+            <p>Have a question or want a website? Send us a message.</p>
+
+            <form
+                action="https://formspree.io/f/mwpgnegr"
+                method="POST"
+                class="contact-form"
+            >
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <div class="input-wrap">
+                            <span class="icon">👤</span>
+                            <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-wrap">
+                            <span class="icon">✉️</span>
+                            <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="message">Message</label>
+                        <div class="input-wrap">
+                            <span class="icon">💬</span>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                required
+                            ></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- spam protection -->
+                <input
+                    type="text"
+                    name="_gotcha"
+                    style="display:none"
+                >
+
+                <!-- redirect after submit -->
+                <input
+                    type="hidden"
+                    name="_redirect"
+                    value="thankyou.html"
+                >
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
         </section>
 
     </main>

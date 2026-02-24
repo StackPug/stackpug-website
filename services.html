@@ -25,9 +25,22 @@
 
     <header class="site-header">
         <nav class="main-nav">
+            <input
+                type="checkbox"
+                id="menu-toggle"
+            >
+            <label
+                for="menu-toggle"
+                class="hamburger"
+            >☰</label>
+
             <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a
+                        href="services.html"
+                        class="active"
+                    >Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -35,12 +48,17 @@
             </ul>
         </nav>
 
-        <a href="index.html">
+        <a
+            href="index.html"
+            title="Home"
+            aria-label="Go to homepage"
+        >
             <img
                 src="./images/stackpug-s.png"
                 alt="StackPug Home logo"
                 class="logo"
             >
+        </a>
 
     </header>
 
@@ -50,8 +68,11 @@
         <section class="content-box">
             <h2>What we offer</h2>
             <p>
-                Replace this with your page content.
-                This box style works for About, Services info, Reviews text, etc.
+                StackPug offers simple, clean responsive websites built for local people.
+                We specialize in creating websites for local businesses, ensuring they have a strong online presence to
+                attract and engage customers in their community.
+                Our current websites are built with HTML and CSS. We are always learning and expanding our skills to
+                offer even better services in the future.
             </p>
         </section>
 
