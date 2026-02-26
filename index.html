@@ -24,55 +24,53 @@
 </head>
 
 <body>
-    <nav class="main-nav">
-        <input
-            type="checkbox"
-            id="menu-toggle"
-        >
-        <label
-            for="menu-toggle"
-            class="hamburger"
-        >☰</label>
-
-        <ul class="nav-links">
-            <li><a
-                    href="index.html"
-                    class="active"
-                >Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="learning.html">Learning</a></li>
-        </ul>
-    </nav>
-    <section class="hero">
-        <h1 class="visually-hidden">StackPug</h1>
-        <header class="site-header">
-            <a
-                href="index.html"
-                title="Home"
-                aria-label="Go to homepage"
+    <header class="site-header">
+        <nav class="main-nav">
+            <input
+                type="checkbox"
+                id="menu-toggle"
             >
-                <img
-                    src="./images/stackpug-s.png"
-                    alt="StackPug Home logo"
-                    class="logo"
-                >
+            <label
+                for="menu-toggle"
+                class="hamburger"
+            >☰</label>
 
-            </a>
-        </header>
+            <ul class="nav-links">
+                <li><a
+                        href="index.html"
+                        class="active"
+                    >Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="learning.html">Learning</a></li>
+            </ul>
+        </nav>
 
-    </section>
-    <section class="callout">
-        <div class="callout-1">
-            <p>Simple, clean, responsive websites built for local businesses</p>
-        </div>
         <a
-            href="portfolio.html"
+            href="index.html"
+            title="Home"
+            aria-label="Go to homepage"
+        >
+            <img
+                src="./images/stackpug-s.png"
+                alt="StackPug Home logo"
+                class="logo"
+            >
+        </a>
+    </header>
+
+    <section class="hero">
+        <h1>
+            Welcome to StackPug<br>
+            <span class="tagline">— where we build simple, clean, responsive websites for local businesses.</span>
+        </h1>
+        <a
+            href="contact.html"
             class="cta-button-1"
-        >View Our Work</a>
+        >Get Started</a>
     </section>
 
     <section class="why-website">
@@ -183,13 +181,21 @@
                 <h3>Maintenance</h3>
                 <p>Ongoing updates, fixes, and support.</p>
             </a>
+            <a
+                href="services.html"
+                class="service-box hosting"
+            >
+                <h3>Hosting & Setup</h3>
+                <p>Help choosing reliable hosting, domain connection, and getting your site live smoothly.</p>
+            </a>
         </div>
     </section>
     <div
         class="callout-2"
         id="contact"
     >
-        <strong>Don’t wait!</strong><br> Affordable websites that bring in customers. Contact us today to get started.
+        <strong>Don’t wait!</strong><br> Affordable websites that bring in customers. <br>Contact us today to get
+        started.
         <br>
         <a
             href="contact.html"
@@ -199,5 +205,6 @@
     <footer>
         <p>© 2026 StackPug | Web Design for Local Businesses. All rights reserved.</p>
     </footer>
+</body>
 
 </html>
