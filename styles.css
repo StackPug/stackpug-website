@@ -84,6 +84,11 @@ i {
     color: #555;
 }
 
+.callout-2 p {
+    margin: 8px 0;
+}
+
+
 /* ======================================================
    3. REUSABLE COMPONENTS (ALL PAGES)
 ====================================================== */
@@ -554,7 +559,7 @@ section {
     margin-top: 10px;
     font-weight: 600;
     text-decoration: none;
-    color: var(--primary);
+    color: var(--purple);
 }
 
 .view-packages:hover {
