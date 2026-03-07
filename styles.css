@@ -88,6 +88,10 @@ i {
     margin: 8px 0;
 }
 
+#choose-p {
+    margin-top: 20px;
+}
+
 
 /* ======================================================
    3. REUSABLE COMPONENTS (ALL PAGES)
@@ -850,4 +854,11 @@ Choose StackPug section */
         transform: none;
         box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
     }
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #7c6cfc;
+    /* ✓ custom focus style */
+    box-shadow: 0 0 0 3px rgba(124, 108, 252, 0.3);
 }
