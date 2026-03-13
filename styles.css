@@ -24,7 +24,7 @@ body {
     margin: 0;
     padding-top: 62px;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 100%;
     color: var(--charcoal);
     background: var(--cream);
     scroll-behavior: smooth;
@@ -127,18 +127,18 @@ i {
 
 .main-nav {
     position: fixed;
-    height: 70px;
+    height: 50px;
     top: 0;
     left: 0;
     width: 100%;
     background: var(--charcoal);
-    padding: 10px 20px;
+    padding: 5px 20px;
     z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 
 .main-nav ul {
     list-style: none;
@@ -151,7 +151,7 @@ i {
     font-size: 1.15rem;
     text-decoration: none;
     font-weight: 500;
-    color: white;
+    color: var(--white);
     display: inline-block;
     transition: .25s ease;
 }
@@ -220,7 +220,7 @@ i {
 }
 
 .process-box {
-    background: white;
+    background: var(--white);
     padding: 24px;
     border-radius: 10px;
     border: 1px solid var(--border);
@@ -239,7 +239,7 @@ i {
 
 .hamburger {
     font-size: 28px;
-    color: white;
+    color: var(--white);
     cursor: pointer;
 }
 
@@ -284,7 +284,7 @@ i {
 .cta-button-1 {
     display: inline-block;
     background: var(--purple);
-    color: var(--charcoal);
+    color: var(--white);
     padding: 12px 20px;
     font-size: 1.25rem;
     text-decoration: none;
@@ -301,9 +301,9 @@ i {
 .cta-button-2 {
     display: inline-block;
     background: var(--charcoal);
-    color: white;
+    color: var(--white);
     padding: 12px 20px;
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-decoration: none;
     border-radius: 4px;
     margin: 20px 0;
@@ -319,9 +319,9 @@ i {
 button[type="submit"] {
     display: inline-block;
     background: var(--purple);
-    color: var(--charcoal);
+    color: var(--white);
     padding: 12px 20px;
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-decoration: none;
     border-radius: 5px;
     transition: .25s ease;
@@ -339,7 +339,7 @@ button[type="submit"]:hover {
     justify-content: center;
     align-items: center;
     background: var(--purple);
-    color: var(--charcoal);
+    color: var(--white);
     padding: 12px 20px;
     font-size: 1.25rem;
     text-decoration: none;
@@ -386,8 +386,7 @@ button[type="submit"]:hover {
 
 footer {
     background: var(--charcoal);
-    color: white;
-    text-align: center;
+    color: var(--white) text-align: center;
     padding: 20px;
     font-size: .9rem;
 }
@@ -497,13 +496,10 @@ section {
 .maintenance-packages {
     padding: 60px 20px;
     text-align: center;
-    padding: 60px 20px;
     /* section spacing */
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .web-package-box,
@@ -530,9 +526,8 @@ section {
     display: flex;
     flex-direction: column;
     min-height: 300px;
+    transition: transform .25s ease, box-shadow .25s ease;
 }
-
-
 
 .price {
     font-size: 1.6rem;
@@ -552,10 +547,24 @@ section {
     padding: 6px 0;
 }
 
+/* hover for normal boxes */
+.web-package-box:hover,
+.maintenance-package-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
+}
+
+/* featured box — merged into one rule */
 .featured {
     transform: scale(1.05);
     border: 2px solid var(--purple);
     box-shadow: 0 12px 28px rgba(0, 0, 0, .15);
+}
+
+/* featured hover — combines both transforms */
+.featured:hover {
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
 }
 
 .view-packages {
@@ -568,6 +577,19 @@ section {
 
 .view-packages:hover {
     text-decoration: underline;
+}
+
+/* normal package boxes */
+.web-package-box:hover,
+.maintenance-package-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
+}
+
+/* featured box stays scaled AND moves up */
+.featured:hover {
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
 }
 
 /* Most popular box badge */
@@ -624,7 +646,7 @@ Choose StackPug section */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+
 }
 
 .why-choose h2 {
@@ -765,14 +787,16 @@ Choose StackPug section */
 .service-box,
 .why-box,
 .choose-box,
-.package-box {
+.package-box,
+.process-box {
     transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .service-box:hover,
 .why-box:hover,
 .choose-box:hover,
-.package-box:hover {
+.package-box:hover,
+.process-box:hover {
     transform: translateY(-8px);
     box-shadow: 0 16px 32px rgba(0, 0, 0, .12);
 }
