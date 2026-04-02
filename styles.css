@@ -9,6 +9,8 @@
     --cream: #FFEFCB;
     --white: #ffffff;
     --border: #ddd;
+    --purple-light: #f3e6f7;
+    --text-muted: #555;
 }
 
 /* ======================================================
@@ -95,6 +97,18 @@ i {
     margin-top: 20px;
 }
 
+.trust-bar {
+    background-color: var(--purple);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem 2.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
 
 /* ======================================================
    3. REUSABLE COMPONENTS (ALL PAGES)
@@ -110,7 +124,7 @@ i {
 }
 
 .logo {
-    width: 400px;
+    width: 180px;
     max-width: 80%;
     border-radius: 10px;
     border: 1px solid black;
@@ -287,7 +301,7 @@ i {
 
 .cta-button-1 {
     display: inline-block;
-    background: var(--purple);
+    background: var(--charcoal);
     color: var(--white);
     padding: 12px 20px;
     font-size: 1.25rem;
@@ -610,14 +624,20 @@ section {
     margin-bottom: 10px;
 }
 
+.why-website,
+.why-choose,
+.services {
+    width: 100%;
+}
+
 .affordable,
 .hosting {
     grid-column: 1 / -1;
     justify-self: center;
-    width: 600px;
-    /* or whatever looks right */
-    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
     /* so it doesn't overflow on mobile */
+    margin: 0 auto;
 }
 
 /* WHY SECTION */
@@ -866,6 +886,33 @@ Choose StackPug section */
     }
 }
 
+@media (max-width: 900px) {
+
+    .services-grid,
+    .why-grid,
+    .choose-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero,
+    .why-website,
+    .why-choose,
+    .services,
+    .packages {
+        padding: 40px 20px;
+    }
+
+    .service-box,
+    .why-box,
+    .choose-box {
+        padding: 20px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
 /* ======================================================
    7. REDUCED MOTION ACCESSIBILITY
 ====================================================== */
@@ -894,4 +941,196 @@ input:focus {
     border: 2px solid #7c6cfc;
     /* ✓ custom focus style */
     box-shadow: 0 0 0 3px rgba(124, 108, 252, 0.3);
+}
+
+.portfolio-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 20px 80px;
+}
+
+/* Grid — 2 columns on desktop, 1 on mobile */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Each card: browser frame on top, info below */
+.portfolio-card {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(176, 88, 194, 0.15);
+}
+
+.portfolio-card .browser-window {
+    max-width: 100%;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-card .browser-bar {
+    flex-shrink: 0;
+    /* stops the bar from collapsing */
+    background: #f0f0f0;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* The actual screenshot image inside the frame */
+.portfolio-screenshot {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    /* crops to fill the space neatly */
+    object-position: top;
+    /* shows the top of the page, not the middle */
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Text area below the browser frame */
+.portfolio-info {
+    padding: 20px 24px 24px;
+}
+
+.portfolio-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--charcoal);
+}
+
+/* h3::after draws a purple underline — override to left-align it here */
+.portfolio-info h3::after {
+    margin: 8px 0 0;
+}
+
+.portfolio-info p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+/* Tech tags — e.g. HTML, CSS, Landing page */
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.tag {
+    background: var(--purple-light);
+    color: var(--purple-dark);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.02em;
+}
+
+/* Live site link */
+.portfolio-link {
+    display: inline-block;
+    color: var(--purple);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.portfolio-link:hover {
+    color: var(--purple-dark);
+    text-decoration: underline;
+}
+
+/* Inline text links used in the intro and note */
+.inline-link {
+    color: var(--purple);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.inline-link:hover {
+    text-decoration: underline;
+    color: var(--purple-dark);
+}
+
+/* "More projects coming soon" note */
+.portfolio-note {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+}
+
+/* Single card takes half the grid width on desktop —
+   looks better than stretching full width when you only have 1 */
+.portfolio-grid:has(.portfolio-card:only-child) {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-screenshot {
+        height: 200px;
+    }
+}
+
+.browser-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-red {
+    background: #ff5f57;
+}
+
+.dot-amber {
+    background: #febc2e;
+}
+
+.dot-green {
+    background: #28c840;
+}
+
+.browser-url {
+    flex: 1;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 0.7rem;
+    color: #555;
+    font-family: 'Inter', sans-serif;
+    margin-left: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
