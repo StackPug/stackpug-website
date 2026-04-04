@@ -24,7 +24,7 @@
 html,
 body {
     margin: 0;
-    padding-top: 62px;
+    padding-top: 30px;
     font-family: 'Poppins', sans-serif;
     font-size: 100%;
     color: var(--charcoal);
@@ -33,6 +33,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 20px;
+    }
 }
 
 button,
@@ -110,6 +116,13 @@ i {
     letter-spacing: 0.05em;
 }
 
+@media (max-width: 600px) {
+    .trust-bar {
+        gap: 0.4rem 1rem;
+
+    }
+}
+
 /* ======================================================
    3. REUSABLE COMPONENTS (ALL PAGES)
 ====================================================== */
@@ -123,21 +136,27 @@ i {
     text-align: center;
 }
 
-.logo {
+.slogo {
     width: 180px;
     max-width: 80%;
     border-radius: 10px;
     border: 1px solid black;
 }
 
-.logo {
+.slogo {
     cursor: pointer;
     transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
-.logo:hover {
+.slogo:hover {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 14px 28px rgba(0, 0, 0, .2);
+}
+
+.nav-logo {
+    height: 36px;
+    width: auto;
+    display: block;
 }
 
 /* NAVBAR */
@@ -153,7 +172,7 @@ i {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 
@@ -216,7 +235,6 @@ i {
     padding: 28px;
 }
 
-.hero,
 .why-website,
 .why-choose,
 .services,
@@ -276,7 +294,7 @@ i {
     z-index: 999;
 }
 
-#menu-toggle:checked+.hamburger+.nav-links {
+#menu-toggle:checked~.hamburger+.nav-links {
     display: flex;
 }
 
@@ -432,14 +450,80 @@ footer {
 ====================================================== */
 
 .hero {
-    text-align: center;
-    padding: 1rem;
-    margin: 0 auto 20px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 24px;
+    gap: 40px;
+    padding-top: 40px;
+    padding-left: 40px;
+    text-align: left;
 }
+
+.hero h1 {
+    text-align: left;
+}
+
+.hero h1::after {
+    margin: 12px 0 0;
+    /* left aligns the purple underline */
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+
+.hero-logo {
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.hero-logo:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .2);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 20px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero h1 {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .hero h1::after {
+        margin: 12px auto 0;
+    }
+
+    .hero-logo {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .hero-content {
+        padding-left: 0;
+    }
+
+    .hero-image {
+        display: none;
+    }
+}
+
+
 
 .callout {
     text-align: center;
@@ -910,6 +994,25 @@ Choose StackPug section */
 
     h3 {
         font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+        position: static;
+        /* takes it out of absolute positioning */
+        order: 2;
+        /* pushes it to the right */
+    }
+
+    .nav-logo-link {
+        order: 1;
+        /* keeps logo on the left */
     }
 }
 
