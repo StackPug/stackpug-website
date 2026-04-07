@@ -492,6 +492,37 @@ button[type="submit"]:hover {
     margin: 8px 0;
 }
 
+.social-callout {
+    background: var(--white);
+    border-left: 4px solid var(--purple);
+    border-radius: 0 10px 10px 0;
+    padding: 28px 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.social-callout h3 {
+    color: var(--purple-dark);
+    margin-bottom: 12px;
+}
+
+.social-callout h3::after {
+    display: none;
+    /* removes the purple underline decoration */
+}
+
+.social-callout p {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.social-callout p:last-child {
+    margin-bottom: 0;
+    color: var(--charcoal);
+    font-weight: 500;
+}
 
 /* ======================================================
    8. FOOTER
@@ -590,7 +621,7 @@ footer {
 .why-choose,
 .services,
 .packages {
-    padding: 80px 20px;
+    padding: 40px 20px;
     width: 100%;
 }
 
@@ -948,7 +979,7 @@ footer {
 
 .portfolio-screenshot {
     width: 100%;
-    height: 260px;
+    height: 360px;
     object-fit: cover;
     object-position: top;
     display: block;
