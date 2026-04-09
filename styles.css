@@ -82,6 +82,7 @@ h2 {
 }
 
 h2 {
+    margin-top: 0;
     font-weight: 700;
     letter-spacing: 0.5px;
     scroll-margin-top: 90px;
@@ -514,14 +515,18 @@ button[type="submit"]:hover {
 
 .social-callout p {
     color: var(--text-muted);
-    margin-bottom: 10px;
+    margin: 0 0 0.4rem 0;
     line-height: 1.7;
 }
 
 .social-callout p:last-child {
-    margin-bottom: 0;
-    color: var(--charcoal);
+    margin: 0 0 0.4rem 0;
+    color: var(--text-muted);
     font-weight: 500;
+}
+
+.social-callout-2 {
+    margin-bottom: 0;
 }
 
 /* ======================================================
