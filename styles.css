@@ -27,7 +27,7 @@
 
 :root {
     --charcoal: #1F1F1F;
-    --purple: #b058c2;
+    --purple: #8e3fa3;
     --purple-dark: #8e3fa3;
     --purple-light: #f3e6f7;
     --cream: #FFEFCB;
@@ -103,13 +103,6 @@ h3::after {
     background: var(--purple);
     margin: 12px auto 0;
     border-radius: 2px;
-}
-
-.tagline {
-    font-size: 0.75em;
-    font-weight: normal;
-    display: block;
-    margin-top: 12px;
 }
 
 i {
@@ -569,9 +562,9 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    padding: 0 40px 40px;
+    padding: 40px 40px 40px;
     text-align: left;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .hero-content {
@@ -581,6 +574,7 @@ footer {
 }
 
 .hero h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
     margin-top: 0;
     text-align: left;
 }
@@ -591,7 +585,7 @@ footer {
 }
 
 .hero-sub {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
     margin-top: 12px;
 }
@@ -604,19 +598,20 @@ footer {
 
 .hero-logo {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     height: auto;
-    border-radius: 10px;
-    border: 1px solid black;
-    cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: none;
+    border-radius: 0;
 }
 
-.hero-logo:hover {
-    transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+.tagline {
+    font-size: 1.1rem;
+    /* was 0.75em which made it tiny */
+    font-weight: 400;
+    display: block;
+    margin-top: 16px;
+    color: var(--charcoal);
 }
-
 
 /* ======================================================
    10. INDEX PAGE — WHY / CHOOSE / SERVICES SECTIONS
@@ -969,6 +964,9 @@ footer {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    margin-top: 40px;
+    max-width: 500px;
+
 }
 
 .portfolio-card:hover {
@@ -976,18 +974,12 @@ footer {
     box-shadow: 0 16px 32px rgba(176, 88, 194, 0.15);
 }
 
-.portfolio-card .browser-window {
-    max-width: 100%;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid var(--border);
-    box-shadow: none;
+.portfolio-browser {
     display: flex;
     flex-direction: column;
 }
 
-.portfolio-card .browser-bar {
-    flex-shrink: 0;
+.browser-bar {
     background: #f0f0f0;
     padding: 8px 12px;
     display: flex;
@@ -1002,7 +994,6 @@ footer {
     object-fit: cover;
     object-position: top;
     display: block;
-    flex-shrink: 0;
     transition: object-position 3s ease;
 }
 
@@ -1070,14 +1061,12 @@ footer {
     border-top: 1px solid var(--border);
 }
 
-/* Centre single card when portfolio only has one project */
 .portfolio-grid:has(.portfolio-card:only-child) {
     grid-template-columns: 1fr;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
-
 
 /* ======================================================
    15. RESPONSIVE — ALL MEDIA QUERIES
