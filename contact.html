@@ -156,7 +156,6 @@
                     value="New StackPug enquiry"
                 >
 
-
                 <div class="form-grid">
 
                     <div class="form-group">
@@ -184,9 +183,117 @@
                             >
                         </div>
                     </div>
+                    <div class="form-group full">
+                        <label for="phone">Phone <span class="optional">(optional)</span></label>
+                        <div class="input-wrap">
+                            <span class="icon">📞</span>
+                            <input
+                                id="phone"
+                                type="tel"
+                                name="phone"
+                                minlength="10"
+                                pattern="[0-9\s\+\-]{10,15}"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- SERVICE CHECKBOXES -->
+                    <div class="form-group full">
+                        <label class="group-label">What do you need help with?</label>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-item">
+                                <input
+                                    type="checkbox"
+                                    name="service[]"
+                                    value="New website"
+                                >
+                                <span class="checkbox-box"></span>
+                                New website
+                            </label>
+                            <label class="checkbox-item">
+                                <input
+                                    type="checkbox"
+                                    name="service[]"
+                                    value="Help with existing website"
+                                >
+                                <span class="checkbox-box"></span>
+                                Help with an existing website
+                            </label>
+                            <label class="checkbox-item">
+                                <input
+                                    type="checkbox"
+                                    name="service[]"
+                                    value="Website Health Check"
+                                >
+                                <span class="checkbox-box"></span>
+                                Website Health Check
+                            </label>
+                            <label class="checkbox-item">
+                                <input
+                                    type="checkbox"
+                                    name="service[]"
+                                    value="Maintenance plan"
+                                >
+                                <span class="checkbox-box"></span>
+                                Maintenance plan
+                            </label>
+                            <label class="checkbox-item">
+                                <input
+                                    type="checkbox"
+                                    name="service[]"
+                                    value="SEO audit"
+                                >
+                                <span class="checkbox-box"></span>
+                                SEO audit
+                            </label>
+                            <label class="checkbox-item">
+                                <input
+                                    type="checkbox"
+                                    name="service[]"
+                                    value="Hosting & domain management"
+                                >
+                                <span class="checkbox-box"></span>
+                                Hosting & domain management
+                            </label>
+                            <label class="checkbox-item">
+                                <input
+                                    type="checkbox"
+                                    name="service[]"
+                                    value="Accessibility improvements"
+                                >
+                                <span class="checkbox-box"></span>
+                                Accessibility improvements
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- BUDGET -->
+                    <div class="form-group full">
+                        <label
+                            for="budget"
+                            class="group-label"
+                        >What's your budget? <span class="optional">(optional)</span></label>
+                        <div class="input-wrap select-wrap">
+                            <span class="icon">💰</span>
+                            <select
+                                id="budget"
+                                name="budget"
+                            >
+                                <option
+                                    value=""
+                                    disabled
+                                    selected
+                                >Select a range</option>
+                                <option value="Under £500">Under £500</option>
+                                <option value="£500 - £1000">£500 – £1,000</option>
+                                <option value="£1000+">£1,000+</option>
+                                <option value="Not sure yet">Not sure yet</option>
+                            </select>
+                        </div>
+                    </div>
 
                     <div class="form-group full">
-                        <label for="message">Message</label>
+                        <label for="message">Tell us a bit more</label>
                         <div class="input-wrap">
                             <span class="icon">💬</span>
                             <textarea
@@ -201,27 +308,14 @@
 
                 </div>
 
-                <!-- spam protection -->
                 <input
                     type="text"
                     name="_gotcha"
                     style="display:none"
                 >
 
-                <!-- redirect after submit -->
-                <input
-                    type="hidden"
-                    name="_next"
-                    value="https://stackpug.netlify.app/thank-you.html"
-                >
-                <input
-                    type="hidden"
-                    name="_redirect"
-                    value="https://stackpug.netlify.app/thank-you.html"
-                >
                 <button type="submit">Send Message</button>
             </form>
-
         </section>
 
     </main>

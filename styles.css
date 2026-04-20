@@ -105,12 +105,12 @@ h3::after {
     border-radius: 2px;
 }
 
-i {
+i:not(.checkbox-box) {
     font-size: 0.5em;
     color: var(--text-muted);
 }
 
-input:focus {
+input:not([type="checkbox"]):focus {
     outline: none;
     border: 2px solid #7c6cfc;
     box-shadow: 0 0 0 3px rgba(124, 108, 252, 0.3);
@@ -623,7 +623,7 @@ footer {
     height: 250px;
     object-fit: cover;
     object-position: center 10%;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
 }
 
@@ -757,6 +757,13 @@ footer {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    max-width: 1100px;
+}
+
+.web-packages {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 .web-packages-grid,
@@ -873,6 +880,15 @@ footer {
     margin-bottom: 10px;
 }
 
+.packages-footnote {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: -20px auto 0;
+    padding: 16px 20px 0;
+    border-top: 1px solid var(--border);
+}
 
 /* ======================================================
    12. CONTACT PAGE
@@ -933,6 +949,75 @@ footer {
 .input-wrap:focus-within {
     border-color: var(--charcoal);
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+.group-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--charcoal);
+}
+
+.optional {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--charcoal);
+}
+
+.checkbox-item input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-box {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: white;
+    transition: background 0.2s, border-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox-item input[type="checkbox"]:checked+.checkbox-box {
+    background: var(--purple);
+    border-color: var(--charcoal);
+}
+
+.checkbox-item input[type="checkbox"]:checked+.checkbox-box::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.select-wrap select {
+    border: none;
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+    color: var(--charcoal);
 }
 
 /*==================Reviews===================*/
@@ -1461,6 +1546,18 @@ footer {
 
 @media (max-width: 600px) {
     .learning-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkbox-grid {
         grid-template-columns: 1fr;
     }
 }
