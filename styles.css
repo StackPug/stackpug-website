@@ -105,7 +105,11 @@ h3::after {
     border-radius: 2px;
 }
 
-i:not(.checkbox-box) {
+.portfolio-h2 {
+    margin-top: 60px;
+}
+
+i:not(.checkbox-box):not(.fab) {
     font-size: 0.5em;
     color: var(--text-muted);
 }
@@ -555,6 +559,22 @@ footer {
     color: var(--purple);
 }
 
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.4rem;
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--purple-dark);
+}
 
 /* ======================================================
    9. INDEX PAGE — HERO
@@ -622,7 +642,7 @@ footer {
     width: 250px;
     height: 250px;
     object-fit: cover;
-    object-position: center 10%;
+    object-position: center 5%;
     margin-top: 2rem;
 
 }
@@ -1275,6 +1295,79 @@ footer {
     margin-right: auto;
 }
 
+/*==========portfolio mobile =================*/
+
+.phone-frame {
+    width: 220px;
+    height: 440px;
+    background: #1a1a1a;
+    border-radius: 36px;
+    padding: 12px;
+    box-shadow:
+        0 0 0 2px #333,
+        0 20px 60px rgba(0, 0, 0, 0.4);
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Camera notch */
+.phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 6px;
+    background: #333;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+/* Home bar */
+.phone-frame::after {
+    content: '';
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #444;
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 26px;
+    overflow: hidden;
+    background: #000;
+}
+
+.mobile-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: object-position 5s ease;
+}
+
+.mobile-screenshot:hover {
+    object-position: bottom;
+}
+
+.phone-frames-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
 /* Learning page =============================================== */
 
 .learning-grid {
@@ -1582,5 +1675,13 @@ footer {
     .content-box:hover {
         transform: none;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+}
+
+@media (max-width: 768px) {
+    .phone-frames-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
     }
 }
