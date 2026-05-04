@@ -109,7 +109,7 @@ h3::after {
     margin-top: 60px;
 }
 
-i:not(.checkbox-box):not(.fab) {
+i:not(.checkbox-box):not(.fab) :not(.colored) {
     font-size: 0.5em;
     color: var(--text-muted);
 }
@@ -1436,30 +1436,25 @@ footer {
     color: var(--purple);
 }
 
-.tech-stack i {
+.tech-stack {
     display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
     margin: 30px auto;
     font-size: 60px;
-    color: unset;
-
 }
 
-.tech-stack {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 30px auto;
+.tech-stack i {
+    font-size: 60px;
 }
 
 .tech-icon {
     width: 60px;
     height: 60px;
 }
+
+
 
 /* ======================================================
    15. RESPONSIVE — ALL MEDIA QUERIES
