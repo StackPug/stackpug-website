@@ -1295,6 +1295,10 @@ footer {
     margin-right: auto;
 }
 
+.inline-link {
+    font-size: 1.2rem;
+}
+
 /*==========portfolio mobile =================*/
 
 .phone-frame {
